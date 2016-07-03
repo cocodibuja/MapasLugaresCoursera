@@ -44,6 +44,7 @@ public class MapasActivity extends FragmentActivity implements OnMapReadyCallbac
         float latitud = Float.parseFloat(parametros.getString("latitud"));
         float longitud = Float.parseFloat(parametros.getString("longitud"));
         String referencia = parametros.getString("referencia");
+        String comentario = parametros.getString("comentario");
 
 
 
@@ -56,7 +57,7 @@ public class MapasActivity extends FragmentActivity implements OnMapReadyCallbac
 
 
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-        mMap.addMarker(new MarkerOptions().position(lugarSeleccionado).title(referencia));
+        mMap.addMarker(new MarkerOptions().position(lugarSeleccionado).title(referencia).alpha(0.7f).snippet(comentario));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(lugarSeleccionado));
        // mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
     }

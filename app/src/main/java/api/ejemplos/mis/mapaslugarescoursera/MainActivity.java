@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         String latitud = "-34.603738900";
         String longitud = "-58.381570400";
+        String comentario = "";
 
 
 
@@ -68,22 +69,27 @@ public class MainActivity extends AppCompatActivity {
         {
             latitud = "-34.603738900";
             longitud = "-58.381570400";
+            comentario = "En el centro de Capital Federal";
+
 
         }  if (lugar.equals("Puerto Madryn"))
         {
             latitud = "-42.7667";
             longitud = "-65.05";
+            comentario = "A vistar a las Ballenas";
 
         }  if (lugar.equals("Tierra del Fuego"))
         {
 
             latitud = "-54.732979";
             longitud = "-63.860882";
+            comentario = "Frioooo en el fin del mundo";
 
         }  if (lugar.equals("Boca Juniors"))
         {
             latitud = "-34.635925";
             longitud = "-58.365222";
+            comentario = "Club Atletico campeón Boca Junior xD";
 
 
         }
@@ -94,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         intentEnviarCoordenadas.putExtra("latitud",latitud);
         intentEnviarCoordenadas.putExtra("longitud",longitud);
         intentEnviarCoordenadas.putExtra("referencia",lugar);
+        intentEnviarCoordenadas.putExtra("comentario",comentario);
         startActivity(intentEnviarCoordenadas);
 
     }
